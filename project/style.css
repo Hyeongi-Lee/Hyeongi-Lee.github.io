@@ -20,7 +20,7 @@ body{
     min-width: 400px;
     position: absolute;
     transform: translate(-50%,-50%);
-    top: 50%;
+    top: 60%;
     left: 50%;
     border-radius: 5px;
     font-family: 'poppins',sans-serif;
@@ -64,4 +64,102 @@ input[type="range"]::-webkit-slider-thumb{
     font-size: 18px;
     text-align: center;
     letter-spacing: 1px;
+}
+nav{
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 25px 25px 30px rgba(0,0,0,0.15);
+    height: 10vh;
+    width: 70vw;
+    top: 10%;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+    margin: auto;
+}
+a{
+    position: relative;
+    text-decoration: none;
+    font-family: 'Poppins',sans-serif;
+    color: #a0a0a0;
+    font-size: 18px;
+    letter-spacing: 0.5px
+    padding: 0 10px;
+}
+a:after{
+    content: "";
+    position: absolute;
+    background-color: #2ebf75;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+a:hover{
+    color: #2ebf75;
+}
+a:hover:after{
+    width: 100%;
+}
+
+.menu{
+    padding: 0 10px 30px 10px;
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(350px,1fr));
+    grid-gap: 20px 40px;
+}
+.food-itmes{
+    display: grid;
+    position: relative;
+    grid-template-rows: auto 1fr;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    margin: 0 20px;
+}
+.food-items img{
+    position: relative;
+    width: 100%;
+    border-radius: 15px 15px 0 0;
+}
+h1{
+    grid-column: 1/-1;
+    text-align: center;
+}
+.details{
+    padding: 20px 10px;
+    display: grid;
+    grid-template-rows: auto 1fr 50px;
+    grid-row-gap: 15px;
+    border-radius: 0 0 15px 15px;
+    background-color: #2ebf75;
+    transform-styLe: preserve-3d;
+    transform: rotateX(-180deg);
+    transform-origin: top;
+    z-index: -1;
+    position: relative;
+    transition: 1s;
+    backface-visability: hidden;
+}
+.food-items:hover .details{
+    transform: rotateX(0deg);
+}
+.details-sub{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.details-sub>h5{
+    font-weight: 600;
+    font-size: 18px;
+}
+.kcal{
+    tesxt-align: right;
+}
+.details>p{
+    color: #6f6f6f;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 400;
+    align-self: stretch;
 }
